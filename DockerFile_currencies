@@ -1,0 +1,4 @@
+FROM openjdk:17
+EXPOSE 8084
+ADD positions/target/positions.jar positions.jar
+ENTRYPOINT ["java", "-jar", "positions.jar", "--server-port=8084"]
